@@ -1,0 +1,8 @@
+Installer 2 - Part of the Bundle with Start Condition project (a WiX Toolset Pill)
+================================================================================
+
+The "Bundle with Start Condition" project is an example that demonstrates how to create a start condition for a bundle.
+A start condition will prevent the execution of the bundle if the condition is not fulfilled.
+
+For more details please check the GitHub repository:
+https://github.com/WiX-Toolset-Pills-15mg/Bundle-with-Start-Condition

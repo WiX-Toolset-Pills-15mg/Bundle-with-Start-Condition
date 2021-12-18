@@ -1,0 +1,1 @@
+BundleWithStartCondition.exe /l install-not-allowed.log AllowToInstall=no
