@@ -1,0 +1,37 @@
+[6198:7248][2022-02-06T07:05:08]i001: Burn v3.11.100.14523, Windows v10.0 (Build 19044: Service Pack 0), path: C:\Users\ALEXAN~1.IUG\AppData\Local\Temp\{8B19473A-94A2-418E-92A8-1DC66F1ADBC9}\.cr\BundleWithStartCondition.exe
+[6198:7248][2022-02-06T07:05:08]i000: Initializing string variable 'AllowToInstall' to value 'yes'
+[6198:7248][2022-02-06T07:05:08]i009: Command Line: '"-burn.clean.room=c:\Projects\WiX Toolset Pills\Bundle with Start Condition\sources\BundleWithStartCondition\bin\Release\BundleWithStartCondition.exe" -burn.filehandle.attached=564 -burn.filehandle.self=560 /l install-not-allowed.log AllowToInstall=no'
+[6198:7248][2022-02-06T07:05:08]i000: Setting string variable 'WixBundleOriginalSource' to value 'c:\Projects\WiX Toolset Pills\Bundle with Start Condition\sources\BundleWithStartCondition\bin\Release\BundleWithStartCondition.exe'
+[6198:7248][2022-02-06T07:05:08]i000: Setting string variable 'WixBundleOriginalSourceFolder' to value 'c:\Projects\WiX Toolset Pills\Bundle with Start Condition\sources\BundleWithStartCondition\bin\Release\'
+[6198:7248][2022-02-06T07:05:08]i000: Setting string variable 'WixBundleLog' to value 'c:\Projects\WiX Toolset Pills\Bundle with Start Condition\sources\BundleWithStartCondition\bin\Release\install-not-allowed.log'
+[6198:7248][2022-02-06T07:05:08]i000: Setting string variable 'WixBundleName' to value 'Bundle with Start Condition'
+[6198:7248][2022-02-06T07:05:08]i000: Setting string variable 'WixBundleManufacturer' to value 'Dust in the Wind'
+[6198:7C84][2022-02-06T07:05:08]i000: Setting string variable 'AllowToInstall' to value 'no'
+[6198:7C84][2022-02-06T07:05:08]i000: Setting numeric variable 'WixStdBALanguageId' to value 1033
+[6198:7C84][2022-02-06T07:05:08]i000: Setting version variable 'WixBundleFileVersion' to value '1.0.0.0'
+[6198:7248][2022-02-06T07:05:08]i100: Detect begin, 2 packages
+[6198:7248][2022-02-06T07:05:08]i101: Detected package: Installer1.msi, state: Absent, cached: None
+[6198:7248][2022-02-06T07:05:08]i101: Detected package: Installer2.msi, state: Absent, cached: None
+[6198:7248][2022-02-06T07:05:08]i052: Condition 'AllowToInstall = "yes"' evaluates to false.
+[6198:7248][2022-02-06T07:05:08]e000: Sorry, you are not allowed to install the bundle.
+[6198:7248][2022-02-06T07:05:08]e000: Error 0x81f40001: Bundle condition evaluated to false: AllowToInstall = "yes"
+[6198:7248][2022-02-06T07:05:08]i199: Detect complete, result: 0x0
+[6198:7248][2022-02-06T07:05:15]i500: Shutting down, exit code: 0x1
+[6198:7248][2022-02-06T07:05:15]i410: Variable: AllowToInstall = no
+[6198:7248][2022-02-06T07:05:15]i410: Variable: WixBundleAction = 5
+[6198:7248][2022-02-06T07:05:15]i410: Variable: WixBundleElevated = 0
+[6198:7248][2022-02-06T07:05:15]i410: Variable: WixBundleFileVersion = 1.0.0.0
+[6198:7248][2022-02-06T07:05:15]i410: Variable: WixBundleInstalled = 0
+[6198:7248][2022-02-06T07:05:15]i410: Variable: WixBundleLog = c:\Projects\WiX Toolset Pills\Bundle with Start Condition\sources\BundleWithStartCondition\bin\Release\install-not-allowed.log
+[6198:7248][2022-02-06T07:05:15]i410: Variable: WixBundleManufacturer = Dust in the Wind
+[6198:7248][2022-02-06T07:05:15]i410: Variable: WixBundleName = Bundle with Start Condition
+[6198:7248][2022-02-06T07:05:15]i410: Variable: WixBundleOriginalSource = c:\Projects\WiX Toolset Pills\Bundle with Start Condition\sources\BundleWithStartCondition\bin\Release\BundleWithStartCondition.exe
+[6198:7248][2022-02-06T07:05:15]i410: Variable: WixBundleOriginalSourceFolder = c:\Projects\WiX Toolset Pills\Bundle with Start Condition\sources\BundleWithStartCondition\bin\Release\
+[6198:7248][2022-02-06T07:05:15]i410: Variable: WixBundleProviderKey = {fbbe9c0a-90e1-4bac-ba06-22d3b014bd48}
+[6198:7248][2022-02-06T07:05:15]i410: Variable: WixBundleSourceProcessFolder = c:\Projects\WiX Toolset Pills\Bundle with Start Condition\sources\BundleWithStartCondition\bin\Release\
+[6198:7248][2022-02-06T07:05:15]i410: Variable: WixBundleSourceProcessPath = c:\Projects\WiX Toolset Pills\Bundle with Start Condition\sources\BundleWithStartCondition\bin\Release\BundleWithStartCondition.exe
+[6198:7248][2022-02-06T07:05:15]i410: Variable: WixBundleTag = 
+[6198:7248][2022-02-06T07:05:15]i410: Variable: WixBundleUILevel = 4
+[6198:7248][2022-02-06T07:05:15]i410: Variable: WixBundleVersion = 1.0.0.0
+[6198:7248][2022-02-06T07:05:15]i410: Variable: WixStdBALanguageId = 1033
+[6198:7248][2022-02-06T07:05:15]i007: Exit code: 0x1, restarting: No

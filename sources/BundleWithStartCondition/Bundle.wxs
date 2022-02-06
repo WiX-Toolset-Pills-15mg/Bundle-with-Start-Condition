@@ -2,7 +2,7 @@
 
 <!--
 WiX Toolset Pills 15mg
-Copyright (C) 2019-2021 Dust in the Wind
+Copyright (C) 2019-2022 Dust in the Wind
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
@@ -18,16 +18,51 @@ You should have received a copy of the GNU General Public License
 along with this program.  If not, see <http://www.gnu.org/licenses/>.
 -->
 
+<!--
+====================================================================================================
+START: Overview
+====================================================================================================
+
+This pill will demonstrate how to create a starting condition for a bundle. The start condition will
+prevent the execution of the bundle if the condition is not fulfilled.
+
+NEXT: Bundle.wxs (DOWN)
+-->
 
 <!--
 ====================================================================================================
-Step 1: Add bal namespace.
+Step 1: Create a new bundle project
 ====================================================================================================
 
-Bal extension is part of the WiX package.
+- Right click on the bundle project in Solution Explorer -> Add -> Reference... -> Browse ->
+  Select the dll file. It can be found in the WiX Toolset installation directory:
+  "C:\Program Files (x86)\WiX Toolset v3.11\bin\\WixBalExtension.dll" -> Add -> OK
 
-Go To: Bundle.wxs (below in this file)
+NEXT: Bundle.wxs (DOWN)
 -->
+
+<!--
+====================================================================================================
+Step 2: Add the WiX Bal extension
+====================================================================================================
+
+- Right click on the bundle project in Solution Explorer -> Add -> Reference... -> Browse ->
+  Select the dll file. It can be found in the WiX Toolset installation directory:
+  "C:\Program Files (x86)\WiX Toolset v3.11\bin\\WixBalExtension.dll" -> Add -> OK
+
+NEXT: Bundle.wxs (DOWN)
+-->
+
+<!--
+====================================================================================================
+Step 3: Add the bal namespace
+====================================================================================================
+
+The "bal" namespace is also needed to be specified on the <Wix> element:
+
+NEXT: Bundle.wxs (DOWN)
+-->
+
 <Wix
     xmlns="http://schemas.microsoft.com/wix/2006/wi"
     xmlns:bal="http://schemas.microsoft.com/wix/BalExtension">
@@ -40,33 +75,32 @@ Go To: Bundle.wxs (below in this file)
 
         <BootstrapperApplicationRef Id="WixStandardBootstrapperApplication.RtfLicense" />
 
-        <bal:Condition Message="Sorry, you are not allowed to install the bundle.">
-            <!--
-            ====================================================================================================
-            Step 3: Create the condition
-            ====================================================================================================
-            
-            In this example, the condition is based on the "AllowToInstall" variable (created below):
-                - if it is "yes", the bundle is allowed to be installed;
-                - any other value will prevent the bundle to be installed.
-            
-            If the condition is false, the text from the "Message" attribute is displayed to the user.
-            
-            END
-            -->
+        <!--
+        ====================================================================================================
+        Step 5: Create the condition
+        ====================================================================================================
+        
+        In this example, the condition is based on the "AllowToInstall" 
+        If the "AllowToInstall" variable is "no", the condition evaluates to false, and the bundle will
+        display the error message specified by the "Message" attribute.
+        
+        NEXT: install-not-allowed.bat
+        -->
 
+        <bal:Condition Message="Sorry, you are not allowed to install the bundle.">
             <![CDATA[AllowToInstall = "yes"]]>
         </bal:Condition>
 
         <!--
         ====================================================================================================
-        Step 2: Create the "AllowToInstall" variable
+        Step 4: Create the "AllowToInstall" variable
         ====================================================================================================
             
         This variable will control if the bundle is allowed to be installed or not.
-        The attribute bal:Overridable="yes" is needed in order to allow the variable to be set from command line.
+        The attribute bal:Overridable="yes" is needed in order to make the variable public and accept to be
+        set from command line.
         
-        Go To: Bundle.wxs (above in this file)
+        NEXT: Bundle.wxs (UP)
         -->
         <Variable
             Name="AllowToInstall"
